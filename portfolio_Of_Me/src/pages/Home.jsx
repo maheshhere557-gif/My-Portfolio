@@ -8,15 +8,51 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import Myimage from "../assets/Myimage.png";
+import { useState } from "react";
+import { useEffect } from "react";
 const Home = () => {
+  const [view,setViews]=useState(0)
+useEffect(()=>{
+
+
+ const countcheck=async(e)=>{
+    try{
+
+  if(!localStorage.getItem("View")){
+
+      let res=await fetch("http://localhost:5000/api/viewCount")
+      let data=await res.json()
+      setViews(data?.Views)
+      localStorage.setItem("View","yes")
+  }else{
+    console.log("view")
+    let response=await fetch("http://localhost:5000/api/showCount")
+    let viewdata=await response.json()
+    console.table(viewdata.Views)
+    setViews(viewdata.Views.ViewCount)
+  localStorage.setItem("View","yes")
+
+  }
+    }catch(error){
+      console.log("Frontend",error)
+    }
+  }
+  countcheck()
+  
+
+  
+ 
+},[])
+ 
+  
   return (
     <div className="bg animate-fade-in-down h-[89vh] bg-[#f8f6ec]">
      
       <div className="h-[90%] flex flex-col   justify-center items-center w-full p-10  ">
-     <div className="w-full"><h2 className="uppercase  text-orange-600/90 tracking-widest text-[0.8em]">Portfolio/2026</h2></div>
+     <div className="w-full flex justify-between pr-15"><h2 className="uppercase  text-orange-600/90 tracking-widest text-[0.8em]">Portfolio/2026</h2> <h2>👀Views:{view}</h2></div>
        <div className="flex items-center justify-between  w-full">
         
-        <div className=" w-[30%] h-[90%]"> <span className="text-8xl">Building Usefull Things for the <span className="text-orange-600/80">web.</span></span>
+        <div className=" w-[30%] h-[90%]"> <span className="text-8xl">Building Usefull Things for the <span  className="text-orange-600/80">web.</span><span></span></span>
         <div className="mt-5 text-gray-500"><p>I am a Bca Graduate And FullStack developer creating Thoughtfull, Responsible Projects Using Mern Stack and NextJs </p></div>
         </div>
         <div className="w-[30%] flex flex-col items-center justify-center "> 

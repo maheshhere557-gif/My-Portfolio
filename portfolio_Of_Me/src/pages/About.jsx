@@ -1,6 +1,6 @@
 import React from 'react'
 import {SiMysql} from "react-icons/si"
-import {FaAws,FaLocationArrow} from "react-icons/fa"
+import {FaAws,FaLocationArrow,FaLinkedin,FaGithub} from "react-icons/fa"
 const About = () => {
   return (
     <div className='bg-[#f8f6ec] h-[89vh] p-10'>
@@ -14,15 +14,17 @@ const About = () => {
           
            <div className='bg-gray-800 absolute right-14 top-52 text-white/70 h-72 w-[30%] flex flex-col gap-2  items-center justify-center'>
             <div className=' w-[90%] h-10 border-b-2 border-gray-500'>
-            <h3 className='uppercase text-sm tracking-widest'> Currently Learning</h3>
+            <h3 className='uppercase text-sm tracking-widest'> Check me On </h3>
 
             </div>
               <div className='mt-8 w-[90%] h-34 flex gap-5 items-center'>
-                <h3>DSA</h3>
-              <SiMysql size={40} className='text-sky-700'/>
-              <FaAws size={40} className='text-orange-700'/>
+              <a href="https://github.com/maheshhere557-gif"><FaGithub size={40} className='text-white'/></a>
+
+              
+              <a href="https://www.linkedin.com/in/mahesh-h-j-592a6b425"><FaLinkedin size={40} className='text-blue-600'/></a>
 
             </div>
+
           
            
           </div>
