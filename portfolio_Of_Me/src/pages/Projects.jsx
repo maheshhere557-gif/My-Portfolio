@@ -34,7 +34,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="bg-[#f8f6ec] h-[89vh] p-15">
+    <div className="bg-[#f8f6ec] md:h-[89vh] p-5 md:p-15">
       <div>
         {" "}
         <span className="text-orange-600 tracking-widest">2026</span>
@@ -44,14 +44,14 @@ const Projects = () => {
           Projects <span className="text-orange-600">.</span>
         </span>
       </div>
-      <div className="h-auto flex justify-between  mt-10 w-full">
+      <div className="h-auto md:flex justify-between  mt-10 w-full">
         {Projects.map((i) => (
           <div
             key={i.id}
-            className="  bg-white shadow-lg h-[60vh] hover:scale-102 transition-all outline-none w-[25%] "
+            className=" mt-5 md:mt-5 bg-white shadow-lg h-[50vh] md:h-[60vh] hover:scale-102 transition-all outline-none md:w-[25%] "
           >
             <div className="bg-white h-[40%] relative ">
-              <div className="h-[400%] w-[400%] scale-25 absolute overflow-hidden top-0 left-0 origin-top-left">
+              <div className="h-[400%] w-[400%] scale-25 absolute overflow-hidden top-0 left-0 origin-top-left ">
                 <iframe className="w-full h-full " src={i.live} frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
 
               </div>

@@ -3,16 +3,17 @@ import {SiMysql} from "react-icons/si"
 import {FaAws,FaLocationArrow,FaLinkedin,FaGithub} from "react-icons/fa"
 const About = () => {
   return (
-    <div className='bg-[#f8f6ec] h-[89vh] p-10'>
-      <div className='border-b-2 w-[25%]'><span className='text-6xl font-semibold'>About <span className='text-orange-600'>Me.</span></span></div>
-      <div className='mt-10 flex justify-between'>
-        <div className='w-[50%]'><span className='text-orange-600 tracking-widest'>A little Context</span>
+    <div className='bg-[#f8f6ec] md:h-[89vh] p-10'>
+      <div className='border-b-2 w-[50%] md:w-[25%]'><span className='text-3xl font-semibold'>About <span className='text-orange-600'>Me.</span></span></div>
+      <div className='mt-10 flex md:flex-row flex-col justify-between'>
+   
+        <div className='md:w-[50%]'><span className='text-orange-600 tracking-widest'>A little Context</span>
         
         <p className='mt-10 text-lg'>BCA Graduate and full-stack web developer with hands-on experience building real-world applications using the MERN stack and Next.js. Skilled in developing responsive web and cross-platform mobile applications, integrating REST and thirdparty APIs, and deploying production-ready projects. Seeking a MERN Stack Developer fresher job to contribute to a fast-growing engineering team. </p>
         </div>
     
           
-           <div className='bg-gray-800 absolute right-14 top-52 text-white/70 h-72 w-[30%] flex flex-col gap-2  items-center justify-center'>
+           <div className='bg-gray-800  absolute md:right-14 md:top-52 text-white/70 h-72 md:w-[30%]  bottom-1 md:bottom-0 flex flex-col gap-2  w-[75%] items-center justify-center'>
             <div className=' w-[90%] h-10 border-b-2 border-gray-500'>
             <h3 className='uppercase text-sm tracking-widest'> Check me On </h3>
 
@@ -28,12 +29,13 @@ const About = () => {
           
            
           </div>
-          <div className='bg-orange-700/70   text-white/70 h-72 w-[30%] flex flex-col gap-2  items-center justify-center'>
+
+          <div className='bg-orange-700/70  mt-15 md:mt-0   text-white/70 h-72 md:w-[30%] flex flex-col gap-2  items-center justify-center'>
             
           </div>
       </div>
 
-      <span className='flex gap-5'> <FaLocationArrow size={28} className='text-orange-600'/><h2 className='text-2xl opacity-60'> Available For Work</h2></span>
+      <span className='flex gap-5 mt-10'> <FaLocationArrow size={28} className='  text-orange-600'/><h2 className='text-2xl opacity-60'> Available For Work</h2></span>
     </div>
   )
 }

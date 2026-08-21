@@ -46,20 +46,22 @@ useEffect(()=>{
  
   
   return (
-    <div className="bg animate-fade-in-down h-[89vh] bg-[#f8f6ec]">
+    <div className="bg animate-fade-in-down  md:h-[89vh] bg-[#f8f6ec]">
      
-      <div className="h-[90%] flex flex-col   justify-center items-center w-full p-10  ">
-     <div className="w-full flex justify-between pr-15"><h2 className="uppercase  text-orange-600/90 tracking-widest text-[0.8em]">Portfolio/2026</h2> <h2>👀Views:{view}</h2></div>
-       <div className="flex items-center justify-between  w-full">
+      <div className="md:h-[90%] flex flex-col   justify-center items-center w-full p-10  ">
+    
+     <div className="w-full flex justify-between md:pr-15"><h2 className="uppercase  text-orange-600/90 tracking-widest text-[0.8em]">Portfolio/2026</h2> <h2>👀Views:{view}</h2></div>
+       <div className="flex items-center justify-between flex-col md:flex-row w-full">
         
-        <div className=" w-[30%] h-[90%]"> <span className="text-8xl">Building Usefull Things for the <span  className="text-orange-600/80">web.</span><span></span></span>
+        <div className=" md:w-[30%] h-[90%]"> <span className=" text-6xl md:text-8xl">Building Usefull Things for the <span  className="text-orange-600/80">web.</span><span></span></span>
         <div className="mt-5 text-gray-500"><p>I am a Bca Graduate And FullStack developer creating Thoughtfull, Responsible Projects Using Mern Stack and NextJs </p></div>
         </div>
-        <div className="w-[30%] flex flex-col items-center justify-center "> 
+
+        <div className="md:w-[30%] md:flex flex-col items-center justify-center "> 
           <img src={Myimage} alt="" className=" contrast-120 shadow-[0_8px_10px] rounded-t-full shadow-orange-600/60 scale-80"/>
           </div>
 
-          <div className="relative w-[30%]">
+          <div className="hidden md:flex relative w-[30%]">
 
             <div className="bg-orange-600/70 h-88" >
               

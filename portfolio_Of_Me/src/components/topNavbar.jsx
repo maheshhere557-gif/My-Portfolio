@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const TopNavbar = () => {
   return (
-    <nav className="flex w-full items-center shadow-md fixed h-[10%] bg-[#f8f6ec] text-white" >
-   <div className='w-[80%]  text-2xl font-extrabold text-black pl-6'><Link to="/"><h2 className='border w-10 text-center rounded-md bg-white'>M</h2></Link></div>
+    <nav className="flex w-full items-center shadow-md z-20 fixed md:h-[10%] h-[6%] bg-[#f8f6ec] text-white" >
+   <div className='md:w-[80%]   text-2xl font-extrabold text-black pl-2 md:pl-6'><Link to="/"><h2 className='border w-10 text-center rounded-md bg-white'>M</h2></Link></div>
    
-      <div className='font-bold text-gray-500 text-[0.8em] p-6 opacity-80 flex w-[50%] justify-between'> 
+      <div className='font-bold hidden text-gray-500 text-[0.8em] p-6 opacity-80 md:flex w-[50%] justify-between'> 
         <Link to="/"> <div className=' hover:text-orange-600'>Home</div></Link>
         <Link to="/about"> <div className=' hover:text-orange-600'>About</div></Link>
         <Link to="/projects"> <div className=' hover:text-orange-600'>Projects</div></Link>

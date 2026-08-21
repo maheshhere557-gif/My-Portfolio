@@ -6,12 +6,14 @@ import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import TopNavbar from './components/topNavbar'
+import Bottomnav from './components/bottomnav'
 const App = () => {
   return (
     <BrowserRouter>
     <div>
       <TopNavbar />
-      <main className='pt-20'>
+      <Bottomnav />
+      <main className='md:pt-20 pt-15'>
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
